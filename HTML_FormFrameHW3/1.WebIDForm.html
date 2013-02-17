@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>PersonalWebForm</title>
+	<style type="text/css">
+		table{border:1px solid #A9A9A9;<!--background-color:#A9A9A9;-->}
+		td{padding:5px;border:1px solid #A9A9A9;<!--height:40px;width:40px-->} <!--#0FFFFE-->
+    </style>
+
+</head>
+<body>
+<form method="get" action="apply-now.php">
+	<input name="subject" type="hidden" value="Class" />
+
+	<table>
+	
+		<tr class="row1">
+			<td colspan="1" style="text-align:right">Last Name</td>
+			<td colspan="3" style="text-align:left">
+					<input type="text" name="lname" style="width:250px;" tabindex="2"/>
+			</td> 
+		</tr>
+
+		<tr class="row2">
+			<td colspan="1" style="text-align:right">First Name</td>
+			<td colspan="3" style="text-align:left">
+					<input type="text" name="fname" style="width:250px;" tabindex="1"/>
+			</td> 
+		</tr>
+		
+		<tr class="row3">
+			<td colspan="1" style="text-align:right">Address</td>
+			<td colspan="3" style="text-align:left">
+				<textarea name="Comments" cols=40 rows=3>Please enter your home address</textarea>
+			</td> 
+		</tr>
+		
+		<tr class="row4">
+			<td colspan="1" style="text-align:right">City</td>
+			<td colspan="1" style="text-align:left">
+					<input type="text" name="city" tabindex="3"/>
+			</td>
+			<td style="text-align:right">State</td>
+			<td style="text-align:left;">
+					<input type="text" name="state" style="width:40px;"/>
+			</td>	
+		</tr>
+		
+		<tr class="row5">
+			<td colspan="1" style="text-align:right">Zip/Postal Code</td>
+			<td colspan="3" style="text-align:left">
+				<input id="zip" 
+					   type="tel" 
+					   required="true" 
+					   pattern="[0-9]{4}"
+			           placeholder="1440" style="width:40px;"/>
+			</td> 
+		</tr>
+		
+		<tr class="row6">
+			<td colspan="1" style="text-align:right">Country</td>
+			<td colspan="3" style="text-align:left">
+				<select name="country" id="country">
+					<option value="FR">France</option>
+					<option value="RO">Romania</option>
+					<option value="USA">United States Of America</option>
+					<option value="BG" selected="selected">Bulgaria</option>
+				</select>
+				<br />
+			</td> 
+		</tr>
+		
+		<tr class="row7">
+			<td colspan="1" style="text-align:right">Phone(country code, area code, number )</td>
+			<td colspan="3" style="text-align:left">
+				<label for="telInput1">(+</label>
+				<input id="telInput1" 
+					   type="tel" 
+					   required="true" 
+					   pattern="[0-9]{3}"
+			           placeholder="359" style="width:40px;"/>
+				<label for="telInput2">)</label>
+				<input id="telInput2" 
+					   type="tel" 
+					   required="true" 
+					   pattern="[0-9]{2}"
+			           placeholder="88" style="width:20px;"/>
+				<label for="telInput3">-</label>
+				<input id="telInput3" 
+					   type="tel" 
+					   required="true" 
+					   pattern="[0-9]{7}"
+			           placeholder="8888888" style="width:60px;"/>
+			</td> 
+		</tr>
+
+		<tr class="row8">
+			<td colspan="1" style="text-align:right">E-mail</td>
+			<td colspan="3" style="text-align:left">
+				<input id="emailInput" 
+					   type="email" 
+			           required="true" 
+			           pattern="[a-zA-Z0-9_]{3,}@[a-zA-Z0-9_]{3,}.[a-zA-Z0-9_]{2,4}"
+			           placeholder="sample@email.com"/>
+			</td> 
+		</tr>
+
+		<tr class="row9">
+			<td colspan="1" style="text-align:right">Birth date</td>
+			<td colspan="3" style="text-align:left">
+				<label for="month">Month</label>
+				<input id="month" 
+					   type="tel" 
+					   required="true" 
+					   pattern="[0-9]{2}"
+			           placeholder="01" style="width:20px;"/>
+				<label for="day">Day</label>
+				<input id="day" 
+					   type="tel" 
+					   required="true" 
+					   pattern="[0-9]{2}"
+			           placeholder="31" style="width:20px;"/>	   
+				<label for="year">Year(4 digit)</label>
+				<input id="year" 
+					   type="tel" 
+					   required="true" 
+					   pattern="[0-9]{4}"
+			           placeholder="1980" style="width:40px;" />
+			</td> 
+		</tr>
+
+		<tr class="row10">
+			<td colspan="1" style="text-align:right">Gender</td>
+			<td colspan="3" style="text-align:left">
+				<select name="gender" id="gender">
+					<option value="F">Female</option>
+					<option value="M" selected="selected">Male</option>
+				</select>
+			</td>
+		</tr>
+		
+		<tr class="row11">
+			<td colspan="1" style="text-align:right">Starting date</td>
+			<td colspan="3" style="text-align:left">
+				<input name="startdate" type="radio" id="sp" value="Spring" />
+				<label for="sp">Spring 2006</label>
+				<input name="startdate" type="radio" id="su" value="Summer" />
+				<label for="su">Summer 2006</label>
+			</td> 
+		</tr>
+
+		<tr class="row12">
+			<td colspan="1" style="text-align:right">Comments/Questions</td>
+			<td colspan="3" style="text-align:left">
+			<textarea name="Comments" cols=40 rows=5>Please send me more information about lodging.</textarea>
+			</td> 
+		</tr>
+
+		<tr class="row13">
+			<td colspan="4" style="background-color:#0FFFFE; text-align:center">
+				<input type="submit" name="submit" value="Submit"/>
+				<input type="reset" value="Clear This Form"/>	
+			</td> 
+		</tr>
+	</table>
+</form>
+</body>
+</html>
